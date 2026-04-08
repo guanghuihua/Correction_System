@@ -1,0 +1,8 @@
+photos/
+photos_small/
+photos_compressed/
+output/
+__pycache__/
+*.pyc
+*.pyo
+.env
