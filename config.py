@@ -14,6 +14,15 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "output")       # 生成的PDF报告
 # Claude API Key（从环境变量读取，或直接填写）
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
+# Qwen API（OCR识别：qwen-vl-max-latest）
+QWEN_API_KEY = os.environ.get("QWEN_API_KEY", "sk-9b0a954533e643d8a045c3b34a3f46dc")
+QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+QWEN_VL_MODEL = "qwen-vl-max-latest"    # 视觉模型，用于OCR/识别预览
+
+# Qwen API（批改：qwen3.6-plus，纯文本推理）
+QWEN_GRADE_API_KEY = os.environ.get("QWEN_GRADE_API_KEY", "sk-c48ae0574dfd45ba83dd03b71a6b4b0a")
+QWEN_GRADE_MODEL = "qwen3.6-plus"       # 文本推理模型，用于作业批改
+
 # 批改配置
 SUBJECT = "高中数学"
 MAX_SCORE = 150          # 试卷总分（可改）
