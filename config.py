@@ -19,9 +19,13 @@ QWEN_API_KEY = os.environ.get("QWEN_API_KEY", "sk-9b0a954533e643d8a045c3b34a3f46
 QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 QWEN_VL_MODEL = "qwen-vl-max-latest"    # 视觉模型，用于OCR/识别预览
 
-# Qwen API（批改：qwen3.6-plus，纯文本推理）
+# Qwen API（批改：qwen-max，快速准确）
 QWEN_GRADE_API_KEY = os.environ.get("QWEN_GRADE_API_KEY", "sk-c48ae0574dfd45ba83dd03b71a6b4b0a")
-QWEN_GRADE_MODEL = "qwen3.6-plus"       # 文本推理模型，用于作业批改
+QWEN_GRADE_MODEL = "qwen-max"           # 用于作业批改
+
+# 作业题目目录（老师预先录入题目，批改时直接使用）
+HOMEWORK_DIR = os.path.join(BASE_DIR, "homework")
+os.makedirs(HOMEWORK_DIR, exist_ok=True)
 
 # 批改配置
 SUBJECT = "高中数学"

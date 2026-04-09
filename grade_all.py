@@ -22,10 +22,12 @@ students = [
     ("学生13", [f"{P}/IMG_20260408_155308.jpg", f"{P}/IMG_20260408_155315.jpg"]),
 ]
 
+HW = "向量数量积第5-10题"   # 预设题目名称
+
 results = []
 for name, photos in students:
     print(f"\n[{students.index((name,photos))+1}/13] {name} ({len(photos)}页)")
-    r = grade_one(photos, student_name=name)
+    r = grade_one(photos, student_name=name, homework_name=HW)
     results.append(r)
 
 pdf = generate_report(results, title="向量数量积作业批改报告（第5-10题）")
